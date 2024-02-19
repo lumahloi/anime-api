@@ -1,46 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="style.css">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
-    <section id="anime_search">
-        <div>
-            <input type="number" name="animeId" id="animeId" placeholder="Digite um número">
-            <button onclick="animeAPI()">Pesquisar</button>
-            <p id="p_erro"></p>
+    <div class="container">
+        <div class="container d-flex justify-content-center">
+            <div class="col-md-10 col-sm-12 container-form">
+                <div class="row">
+                    <div class="col">
+                        <input type="number" name="animeId" id="animeId" placeholder="Digite um número"
+                            class="form-control">
+                    </div>
+                    <div class="col">
+                        <button onclick="animeAPI()" type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-center">
+                        <p id="p_erro"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section id="anime_section">
-        <main>
-            <p>ID: <span id="anime_id">X</span></p>
-            <article>
-                <figure><img src="" alt="Poster do anime" id="anime_img"></figure>
-            
-                <aside>
-                    <a href="" id="anime_url"><h1 id="anime_nome">Nome do anime</h1></a>
-                    <p id="anime_sinopse"></p>
-                    <p>Tipo: <span id="anime_type">X</span></p>
-                    <p>Episódios: <span id="anime_eps">X</span></p>
-                    <p>Status: <span id="anime_status"></span></p>
-                    <p>Nota: <span id="anime_score"></span></p>
-                    <p>Membros: <span id="anime_members"></span></p>
-                    <p>Favoritos: <span id="anime_favs"></span></p>
-                    <p>Temporada: <span id="anime_season"></span></p>
-                    <p>Ano: <span id="anime_year"></span></p>
-                </aside>
-            </article>
-            <h2>Personagens principais</h2>
-            <ul id="anime_chara_list">
-            </ul>
-        </main>
-    </section>
+        <div class="container" id="container-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 text-end">
+                        <p class="text">ID: <span id="anime_id">X</span></p>
+                    </div>
+                </div>
 
-    <script src="script.js"></script>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5">
+                        <img src="" alt="Poster do anime" id="anime_img" class="mx-auto d-block img-thumbnail">
+                    </div>
+                    <div class="col-md-6">
+                        <a href="" id="anime_url">
+                            <h1 id="anime_nome">Nome do anime</h1>
+                        </a>
+                        <p id="anime_sinopse"></p>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Tipo:</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span id="anime_type">X</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Episódios:</p>
+                                    </div>
+                                    <div class="col">
+                                        <span id="anime_eps">X</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Status:</p>
+                                    </div>
+                                    <div class="col">
+                                        <span id="anime_status">X</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Nota:</p>
+                                    </div>
+                                    <div class="col">
+                                        <span id="anime_score">X</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!---->
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Membros:</p>
+                                    </div>
+                                    <div class="col"><span id="anime_members">X</span></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Favoritos:</p>
+                                    </div>
+                                    <div class="col"><span id="anime_favs">X</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Temporada:</p>
+                                    </div>
+                                    <div class="col"><span id="anime_season">X</span></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text">Ano:</p>
+                                    </div>
+                                    <div class="col"><span id="anime_year">X</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container" id="container-chara">
+                    <div class="row mt-4">
+                        <div class="col text-center">
+                            <h3>Personagens principais</h3>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row text-center mt-4 d-flex justify-content-center">
+                            <div class="col-md-2" id="col_0" class="chara_pic">
+                                <div class="row">
+                                    <div class="col">
+                                        <p id="chara_0">Nome</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="" alt="" id="img_0" class="mx-auto d-block img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" id="col_1" class="chara_pic">
+                                <div class="row">
+                                    <div class="col">
+                                        <p id="chara_1">Nome</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="" alt="" id="img_1" class="mx-auto d-block img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" id="col_2" class="chara_pic">
+                                <div class="row">
+                                    <div class="col">
+                                        <p id="chara_2">Nome</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="" alt="" id="img_2" class="mx-auto d-block img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" id="col_3" class="chara_pic">
+                                <div class="row">
+                                    <div class="col">
+                                        <p id="chara_3">Nome</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="" alt="" id="img_3" class="mx-auto d-block img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" id="col_4" class="chara_pic">
+                                <div class="row">
+                                    <div class="col">
+                                        <p id="chara_4">Nome</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="" alt="" id="img_4" class="mx-auto d-block img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- mais div cols --->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center mt-5">
+            <footer class="col-md-10 col-sm-12 container-form">Feito por <a href="https://github.com/lumahloi" target="_blank">Lumah Pereira</a></footer>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>

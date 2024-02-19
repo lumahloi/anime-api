@@ -1,67 +1,64 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
+body {
+    padding: 1em;
+}
 
-    body {
-        background-image: linear-gradient(rgb(135, 46, 175), rgb(96, 35, 125));
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
+.container-form {
+    background-color: rgb(192, 78, 230);
+    border-radius: 5px;
+    padding: 0.8em;
+}
 
-    #anime_search {
-        display: block;
-        width: 100%;
-    }
+#p_erro {
+    margin: 10px 0px 0px 0px;
+    display: none;
+}
 
-    div {
-        display: flex;
-        width: 100%;
-        margin: 30px 0px;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1em;
-    }
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(99, 16, 126) !important;
+    border-color: rgb(192, 78, 230) !important;
+}
 
-    /* tirando a setinha do input */
+.btn-primary:hover {
+    background-color: rgb(67, 10, 85) !important;
+    border-color: rgb(67, 10, 85) !important;
+}
 
-    input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+#container-info {
+    margin-top: 20px;
+    display: none;
+}
 
-    input[type=number] {
-        -moz-appearance: textfield;
-        height: 50px;
-        width: 300px;
-        padding: 1em;
-        font-size: 1em;
-        border: none;
-        border-radius: 20px;
-        box-shadow: 1px 1px 1px 1px black;
-    }
+.text {
+    color: gray;
+    font-weight: bold;
+}
 
-    button {
-        background-color: rgb(96, 35, 125);
-        border: none;
-        border-radius: 80px;
-        color: white;
-    }
+#anime_url {
+    text-decoration: none;
+    color: rgb(99, 16, 126);
+}
 
-    article {
-        display: flex;
-        gap: 2em;
-        flex-direction: row;
-    }
+img {
+    box-shadow: 10px 10px 0px rgba(140, 57, 168, 0.832);
+}
 
-    #anime_section{
-        /*display: none;*/
-        width: 800px;
-        margin: auto;
-        background-color: aliceblue;
-        padding: 2em;
-        border-radius: 30px;
-    }
+#container-chara {
+    display: none;
+}
+
+h3 {
+    color: rgb(67, 10, 85) !important;
+}
+
+.chara_pic {
+    display: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+a:hover {
+    color: rgb(67, 10, 85) !important;
+}
