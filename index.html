@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="anime_search">
+        <div>
+            <input type="number" name="animeId" id="animeId" placeholder="Digite um número">
+            <button onclick="animeAPI()">Pesquisar</button>
+            <p id="p_erro"></p>
+        </div>
+    </section>
+
+    <section id="anime_section">
+        <main>
+            <p>ID: <span id="anime_id">X</span></p>
+            <article>
+                <figure><img src="" alt="Poster do anime" id="anime_img"></figure>
+            
+                <aside>
+                    <a href="" id="anime_url"><h1 id="anime_nome">Nome do anime</h1></a>
+                    <p id="anime_sinopse"></p>
+                    <p>Tipo: <span id="anime_type">X</span></p>
+                    <p>Episódios: <span id="anime_eps">X</span></p>
+                    <p>Status: <span id="anime_status"></span></p>
+                    <p>Nota: <span id="anime_score"></span></p>
+                    <p>Membros: <span id="anime_members"></span></p>
+                    <p>Favoritos: <span id="anime_favs"></span></p>
+                    <p>Temporada: <span id="anime_season"></span></p>
+                    <p>Ano: <span id="anime_year"></span></p>
+                </aside>
+            </article>
+            <h2>Personagens principais</h2>
+            <ul id="anime_chara_list">
+            </ul>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
